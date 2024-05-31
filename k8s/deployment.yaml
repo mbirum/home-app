@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: birum-home-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: birum-home-app
+  template:
+    metadata:
+      labels:
+        app: birum-home-app
+    spec:
+      containers:
+        - name: app
+          image: mbirum/home-app:latest
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 8081
+              protocol: TCP
+          resources:
+            requests:
+              memory: "1Gi"
+            limits:
+              memory: "2Gi"
