@@ -1,3 +1,4 @@
+import { ExternalLink } from '@/components/ExternalLink';
 import { StyleSheet } from 'react-native';
 
 
@@ -5,6 +6,10 @@ export default function HomeScreen() {
   return (
     <div>
       Hello 2
+      <br/>
+      <ExternalLink href="https://www.google.com/">
+        <span>Go to google</span>
+      </ExternalLink>
     </div>
   );
 }
