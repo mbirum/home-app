@@ -20,4 +20,7 @@ RUN npm install
 # copy source
 COPY . .
 
-CMD ["npm", "run", "web"]
+# export
+RUN npx expo export --platform web
+
+CMD ["npx", "serve", "dist"]
