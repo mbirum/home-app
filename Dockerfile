@@ -23,4 +23,4 @@ COPY ./app.json ./
 COPY ./babel.config.js ./
 COPY ./tsconfig.json ./
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "web"]
