@@ -13,7 +13,6 @@ EXPOSE $PORT 19001 19002
 RUN mkdir /opt/home-app
 WORKDIR /opt/home-app
 ENV PATH /opt/home-app/.bin:$PATH
-#RUN yarn add jest && yarn add jest-expo
 COPY ./package.json ./
 RUN npm install
 
