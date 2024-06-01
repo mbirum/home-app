@@ -24,7 +24,7 @@ COPY ./babel.config.js ./
 COPY ./tsconfig.json ./
 
 COPY ./.expo ./.expo
-COPY ./expo-env.d.ts ./
+#COPY ./expo-env.d.ts ./
 COPY ./tsconfig.json ./
 
 CMD ["npm", "run", "web"]
