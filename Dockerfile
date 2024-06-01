@@ -1,5 +1,8 @@
 FROM node:22.2.0-bullseye
 
+ARG NODE_ENV=production
+ENV NODE_ENV $NODE_ENV
+
 ARG PORT=19006
 ENV PORT $PORT
 EXPOSE $PORT 19001 19002
@@ -13,18 +16,6 @@ COPY ./package.json ./
 RUN npm install
 
 # copy source
-COPY ./app ./app
-COPY ./assets ./assets
-COPY ./components ./components
-COPY ./constants ./constants
-COPY ./hooks ./hooks
-COPY ./scripts ./scripts
-COPY ./app.json ./
-COPY ./babel.config.js ./
-COPY ./tsconfig.json ./
-
-COPY ./.expo ./.expo
-#COPY ./expo-env.d.ts ./
-COPY ./tsconfig.json ./
+COPY . .
 
 CMD ["npm", "run", "web"]
