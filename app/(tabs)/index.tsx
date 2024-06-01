@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 
 export default function HomeScreen() {
 
-  const [imageUrl, setImageUrl] = useState<String>("");
+  const [imageUrl, setImageUrl] = useState<String>("init");
 
   const getImage = async () => {
     try {
@@ -26,22 +26,3 @@ export default function HomeScreen() {
     </div>
   );
 }
-
-const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
-});
