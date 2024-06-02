@@ -20,15 +20,18 @@ export default function HomeScreen() {
   }, []);
 
   return (
-    <div>
+    <div style={styles.wrapper}>
       <img style={styles.image} src={imageUrl} />
     </div>
   );
 }
 
 const styles = StyleSheet.create({
+  wrapper: {
+    textAlign: "center"
+  },
   image: {
-    width:"100%",
-    height:"100%"
+    width: "90%",
+    height: "77%"
   }
 });
