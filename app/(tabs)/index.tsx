@@ -7,7 +7,7 @@ export default function HomeScreen() {
 
   const getImage = async () => {
     try {
-      const response = await fetch('http://k8s-services-birumhom-35ce0a4c6a-1225687380.us-east-2.elb.amazonaws.com/images/chicago-pixelated');
+      const response = await fetch('http://k8s-services-birumhom-35ce0a4c6a-1225687380.us-east-2.elb.amazonaws.com/images/Chicago');
       const json = await response.json();
       setImageUrl(json.data);
     } catch (error) {
