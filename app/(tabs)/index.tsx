@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 
 export default function HomeScreen() {
 
-  const [imageUrl, setImageUrl] = useState<String>("init");
+  const [imageUrl, setImageUrl] = useState<string>("");
 
   const getImage = async () => {
     try {
@@ -22,7 +22,7 @@ export default function HomeScreen() {
 
   return (
     <div>
-      { imageUrl }
+      <img src={imageUrl} />
     </div>
   );
 }
