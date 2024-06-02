@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { StyleSheet } from 'react-native';
 
 export default function HomeScreen() {
 
@@ -20,7 +21,14 @@ export default function HomeScreen() {
 
   return (
     <div>
-      <img width="200" height="150" src={imageUrl} />
+      <img style={styles.image} src={imageUrl} />
     </div>
   );
 }
+
+const styles = StyleSheet.create({
+  image: {
+    width:"100%",
+    height:"100%"
+  }
+});
