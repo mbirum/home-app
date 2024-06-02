@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import { StyleSheet } from 'react-native';
-
 
 export default function HomeScreen() {
 
@@ -22,7 +20,7 @@ export default function HomeScreen() {
 
   return (
     <div>
-      <img src={imageUrl} />
+      <img width="200" height="150" src={imageUrl} />
     </div>
   );
 }
